@@ -1,11 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project>
-	<PropertyGroup>
-		<ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
-		<CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
-		<CentralPackageFloatingVersionsEnabled>true</CentralPackageFloatingVersionsEnabled>
-		<NoWarn>$(NoWarn);NU1507</NoWarn>
-	</PropertyGroup>
-	<ItemGroup>
-	</ItemGroup>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+    <CentralPackageFloatingVersionsEnabled>true</CentralPackageFloatingVersionsEnabled>
+    <NoWarn>$(NoWarn);NU1507</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageVersion Include="MediatR" Version="12.4.1" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration" Version="10.0.0-preview.1.25080.5" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Abstractions" Version="10.0.0-preview.1.25080.5" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="10.0.0-preview.1.25080.5" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.0-preview.1.25080.5" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="10.0.0-preview.1.25080.5" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting.Abstractions" Version="10.0.0-preview.1.25080.5" />
+    <PackageVersion Include="Microsoft.Extensions.Http" Version="10.0.0-preview.1.25080.5" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.0-preview.1.25080.5" />
+    <PackageVersion Include="Microsoft.Extensions.Options" Version="10.0.0-preview.1.25080.5" />
+    <PackageVersion Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="10.0.0-preview.1.25080.5" />
+    <PackageVersion Include="Microsoft.Extensions.Options.DataAnnotations" Version="10.0.0-preview.1.25080.5" />
+    <PackageVersion Include="Microsoft.Extensions.Primitives" Version="10.0.0-preview.1.25080.5" />
+    <PackageVersion Include="System.Configuration.ConfigurationManager" Version="10.0.0-preview.1.25080.5" />
+    <PackageVersion Include="System.Text.Json" Version="10.0.0-preview.1.25080.5" />
+  </ItemGroup>
 </Project>
