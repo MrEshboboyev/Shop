@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
+    <UserSecretsId>38e404d2-76af-4c6b-9f99-2bb87a221381</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -43,10 +44,6 @@
     <ProjectReference Include="..\..\Core\Shop.Application\Shop.Application.csproj" />
     <ProjectReference Include="..\..\Core\Shop.Query\Shop.Query.csproj" />
     <ProjectReference Include="..\..\Infrastructure\Shop.Infrastructure\Shop.Infrastructure.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>
