@@ -1,49 +1,56 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
-    <UserSecretsId>38e404d2-76af-4c6b-9f99-2bb87a221381</UserSecretsId>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<IncludeOpenAPIAnalyzers>true</IncludeOpenAPIAnalyzers>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<UserSecretsId>38e404d2-76af-4c6b-9f99-2bb87a221381</UserSecretsId>
+		<DockerTargetOS>Linux</DockerTargetOS>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+		<DockerfileContext>..\..\..</DockerfileContext>
+		<DockerComposeProjectPath>..\..\..\docker-compose.dcproj</DockerComposeProjectPath>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Content Remove="C:\Users\developer\.nuget\packages\owaspheaders.core\9.7.2\contentFiles\any\net9.0\README.md" />
-  </ItemGroup>
+	<ItemGroup>
+		<Content Remove="C:\Users\developer\.nuget\packages\owaspheaders.core\9.7.2\contentFiles\any\net9.0\README.md" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Ardalis.Result" />
-    <PackageReference Include="Asp.Versioning.Mvc" />
-    <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" />
-    <PackageReference Include="AspNetCore.HealthChecks.MongoDb" />
-    <PackageReference Include="AspNetCore.HealthChecks.Redis" />
-    <PackageReference Include="AspNetCore.HealthChecks.UI.Client" />
-    <PackageReference Include="AutoMapper" />
-    <PackageReference Include="CorrelationId" />
-    <PackageReference Include="MediatR" />
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Analyzers" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" />
-    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" />
-    <PackageReference Include="MiniProfiler.AspNetCore.Mvc" />
-    <PackageReference Include="MiniProfiler.EntityFrameworkCore" />
-    <PackageReference Include="OwaspHeaders.Core" />
-    <PackageReference Include="Scalar.AspNetCore" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Ardalis.Result" />
+		<PackageReference Include="Asp.Versioning.Mvc" />
+		<PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" />
+		<PackageReference Include="AspNetCore.HealthChecks.MongoDb" />
+		<PackageReference Include="AspNetCore.HealthChecks.Redis" />
+		<PackageReference Include="AspNetCore.HealthChecks.UI.Client" />
+		<PackageReference Include="AutoMapper" />
+		<PackageReference Include="CorrelationId" />
+		<PackageReference Include="MediatR" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Analyzers" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" />
+		<PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" />
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" />
+		<PackageReference Include="MiniProfiler.AspNetCore.Mvc" />
+		<PackageReference Include="MiniProfiler.EntityFrameworkCore" />
+		<PackageReference Include="OwaspHeaders.Core" />
+		<PackageReference Include="Scalar.AspNetCore" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\Core\Shop.Application\Shop.Application.csproj" />
-    <ProjectReference Include="..\..\Core\Shop.Query\Shop.Query.csproj" />
-    <ProjectReference Include="..\..\Infrastructure\Shop.Infrastructure\Shop.Infrastructure.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\Core\Shop.Application\Shop.Application.csproj" />
+		<ProjectReference Include="..\..\Core\Shop.Query\Shop.Query.csproj" />
+		<ProjectReference Include="..\..\Infrastructure\Shop.Infrastructure\Shop.Infrastructure.csproj" />
+	</ItemGroup>
 
 </Project>

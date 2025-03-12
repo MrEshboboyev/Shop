@@ -1,0 +1,68 @@
+networks:
+  app-network:
+    driver: bridge
+
+services:
+
+  # ASP.NET Core Web API Application
+  shop.publicapi:
+    image: ${DOCKER_REGISTRY-}shop-publicapi
+    container_name: shop-publicapi
+    restart: always
+    build:
+      context: .
+      dockerfile: src/Presentation/Shop.PublicApi/Dockerfile
+    expose:
+      - 80
+    links:
+      - shop-sql-server-dotnet10
+      - shop-mongo-server-dotnet10
+      - shop-redis-dotnet10
+    networks:
+      - app-network
+    depends_on:
+      - shop-sql-server-dotnet10
+      - shop-mongo-server-dotnet10
+      - shop-redis-dotnet10
+
+  # SQL Server
+  shop-sql-server-dotnet10:
+    image: mcr.microsoft.com/azure-sql-edge:latest
+    cap_add: [ 'SYS_PTRACE' ]
+    hostname: mssql
+    container_name: shop-sql-server-dotnet10
+    restart: always
+    expose:
+      - 1433
+    ports:
+      - "1433:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=pMA63033n6tF
+    networks:
+      - app-network
+
+  # MongoDB Server
+  shop-mongo-server-dotnet10:
+    image: mongo:latest
+    container_name: shop-mongo-server-dotnet10
+    restart: always
+    expose:
+      - 27017
+    ports:
+      - "27017:27017"
+    networks:
+      - app-network
+
+  # Redis Cache Server
+  shop-redis-dotnet10:
+    image: redis:latest
+    container_name: shop-redis-dotnet10
+    command: redis-server --requirepass pMA63033n6tF
+    restart: always
+    expose:
+      - 6379
+    ports:
+      - "6379:6379"
+    networks:
+      - app-network
